@@ -86,6 +86,8 @@ function puts-warn (){
 # Switch to the repo's context.
 cd $BUILD_DIR
 
+tar xpzf $ROOT_DIR/vendor/swig.tgz
+
 # ### Sanity Checks
 # 
 # Just a little peace of mind.
