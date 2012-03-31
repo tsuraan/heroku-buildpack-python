@@ -87,7 +87,7 @@ function puts-warn (){
 cd $BUILD_DIR
 
 puts-step "extracting swig"
-tar xpzf $ROOT_DIR/vendor/swig.tgz
+tar xpvzf $ROOT_DIR/vendor/swig.tgz | indent
 puts-step "... done"
 
 # ### Sanity Checks
