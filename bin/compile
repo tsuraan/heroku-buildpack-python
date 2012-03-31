@@ -86,10 +86,12 @@ function puts-warn (){
 # Switch to the repo's context.
 cd $BUILD_DIR
 
-ls $BUILD_DIR|indent
 puts-step "extracting swig to $BUILD_DIR"
 tar xpvzf $ROOT_DIR/vendor/swig.tgz | indent
 puts-step "... done"
+export PATH="$BUILD_DIR/usr/bin:$PATH"
+export LD_LIBRARY_PATH="$BUILD_DIR/lib64:$LD_LIBRARY_PATH"
+export LIBRARY_PATH="$BUILD_DIR/lib64:$LIBRARY_PATH"
 
 # ### Sanity Checks
 # 
