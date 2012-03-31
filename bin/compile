@@ -86,7 +86,8 @@ function puts-warn (){
 # Switch to the repo's context.
 cd $BUILD_DIR
 
-puts-step "extracting swig"
+ls $BUILD_DIR|indent
+puts-step "extracting swig to $BUILD_DIR"
 tar xpvzf $ROOT_DIR/vendor/swig.tgz | indent
 puts-step "... done"
 
