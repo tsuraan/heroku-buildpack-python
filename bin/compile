@@ -89,6 +89,8 @@ cd $BUILD_DIR
 puts-step "extracting swig to $BUILD_DIR"
 tar xpvzf $ROOT_DIR/vendor/swig.tgz | indent
 puts-step "... done"
+echo $PATH|indent
+echo $LD_LIBRARY_PATH|indent
 export PATH="$BUILD_DIR/usr/bin:$PATH"
 export LD_LIBRARY_PATH="$BUILD_DIR/lib64:$LD_LIBRARY_PATH"
 export LIBRARY_PATH="$BUILD_DIR/lib64:$LIBRARY_PATH"
